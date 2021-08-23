@@ -1,0 +1,344 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body { font-family: 'Noto Sans TC', sans-serif;}
+
+/*整體*/
+.wrap {
+	background-color: rgb(163, 107, 107);
+	margin: 0 auto;
+	width: 1000px;	
+}
+.wrap a{
+	text-decoration: none;
+}
+
+/*並排*/
+.sns,.header,.nav,.content,.form,
+.footer,.data,.information,.data {
+	display: flex;	
+}
+
+/*以下SNS*/
+.sns{
+	justify-content: flex-end;
+	align-items: center; 
+	background-color: #EEEEEE;
+	padding: 20px 0px 20px 0px;
+}
+.fb a{
+	color: #4460A0;
+	padding-left: 5px;
+}
+.fb{
+	padding-right: 10px;
+}
+.twitter a{
+	color: #1BB0E8;
+	padding-left: 5px;
+}
+.twitter{
+	padding-left: 10px;
+	border-left: 1px solid rgb(115, 115, 126);
+}
+.fb a:hover,.twitter a:hover{
+	font-weight: bold;
+}
+.fb a:active,.twitter a:active{
+	font-weight: bold;
+	color: black;
+}
+
+
+/*左右對齊*/
+.header,.footer{
+	justify-content: space-between;
+}
+
+/*以下header*/
+
+.header{
+	background-color: white;
+	align-items: center;    
+}
+.nav a{
+	display: block;
+	position: relative;
+	color: #00CC99;
+	font-size: 18px;
+	font-weight: bold;
+    padding: 20px 20px;
+	border-bottom: 4px solid transparent;
+}
+.nav a:hover{
+	border-bottom: 4px solid #00CC99;
+	background-color: rgba(0, 0, 0, 0.712);
+}
+
+.nav li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+	border-bottom: 4px solid #00CC99;
+	background-color: rgba(0, 0, 0, 0.712);
+	color: #fff;
+}
+.nav li:hover > a:active{
+	background-color: rgba(0, 0, 0, 0.904);
+}
+
+
+.header .nav{
+	display: flex;
+	position: relative; 
+}
+.dropdown-item{
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 4px rgb(0 0 0 / 10%); 
+
+	position: absolute;
+    top: 10;
+    right: 0;
+    left: 0;
+	z-index: 9999;
+	text-align: center;
+    white-space: nowrap;
+	display: none;
+}
+	
+
+
+
+.form{
+    flex-direction: column;
+    align-items: center;
+}
+
+/*top*/
+.top{
+position: fixed;
+bottom: 10px;
+right: 10px;
+display: none;
+}
+.top a:hover{
+	filter:brightness(70%);
+}
+.top a:active{
+	filter:brightness(40%);		
+}
+
+
+/*以下banner*/
+/*.banner{
+	background-image: url(../images/banner.png);
+    background-size: cover;
+    height: 346px;
+    display: flex;
+    align-items: center;
+}*/
+
+.banner{
+	position: relative; 
+}
+.swiper-container {
+    /*width: 600px;*/
+	height: 346px;
+  }
+.slogan{	
+	position: absolute;
+	top:25%;
+	
+	z-index: 2;
+	width:960px;
+	line-height: 46px;
+	color: white;
+	font-size: 36px;
+	padding: 40px 20px;
+	background-color: #000000b7;
+}
+
+/*以下content*/
+.content{
+	justify-content: space-around;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: white;
+}
+.item{
+	background-color: white;
+	width: 300px;
+    padding: 15px;
+	margin: 70px 15px 70px 15px;
+    box-shadow: 0px 2px 4px 2px rgb(0 0 0 / 10%);
+}
+.item img{
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 14px;
+}
+.item h2{
+	text-align: center;
+	font-size: 20px;
+	padding-bottom: 14px;
+	font-weight: bold;
+}
+.item p{	
+	line-height: 28px;
+	text-align:justify;
+}
+.item li{
+	line-height: 28px
+}
+
+.item ol {
+    margin-left: 30px;
+    list-style-type: disc;
+}
+
+
+
+/*以下form*/
+.form table,tr{
+	border-top: 1px solid #E2E2E2;
+	border-bottom: 1px solid #E2E2E2;
+}
+.form th{
+	background-color: #F7F7F7;
+}
+.form{
+	background-color: white;
+	padding-bottom: 70px;
+	font-weight: bold;
+}
+.form h2{
+	line-height: 80px;
+}
+.form th,td{
+	padding: 14px 60px;
+	text-align: left;	
+}
+.color{
+	color: #12AC86;
+}
+/*以下green*/
+.green{
+	background: linear-gradient(#00674D,#009772);
+	padding-left: 20px;
+	padding-right: 20px;
+	padding: 30px;
+}
+.greenmessage{
+	width: 460px;
+	height: 250px;
+	border-radius:4px 4px 4px 4px;
+	border: none;
+}
+.green,.form h2{
+	text-align: center;	
+	font-size: 28px;
+}
+.green h2{
+	color: white;
+	padding-bottom: 30px;
+	line-height: 40px;
+}
+.data{
+    justify-content: space-around;
+}
+.information{
+    flex-direction: column;
+	margin-left: 20px;
+}
+.green label{
+	color: white;
+	text-align: left;
+	font-size: 16px;
+	padding-bottom: 6px;
+	
+}
+.green .information input{
+	width: 450px;
+	height: 30px;
+	border-radius:4px 4px 4px 4px;
+	border: none;
+	margin-bottom:20px;
+}
+
+.sendout{
+	width: 72px;
+	height: 32px;
+	color: white;
+	background: #00CC99;
+	border-radius:4px 4px 4px 4px;
+	border: none;
+	font-size: 14px;
+	align-self: flex-end;
+}
+.green .information button:hover{
+	background: #00c291;
+	cursor: pointer
+}
+
+
+
+/*以下footer*/
+.footer{
+	background-color: white;
+	padding: 26px 20px 50px 20px;
+}
+.footer a{
+	color: #E33B88;
+	
+}
+.mail{
+	padding-bottom: 4px;
+}
+.footer a:hover{
+	border-bottom:1px solid #E33B88;
+}
+
+
